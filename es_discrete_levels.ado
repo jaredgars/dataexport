@@ -13,7 +13,9 @@ program define es_discrete_levels
 
 		qui local pv = round( `pv', 0.001)
 		qui local pv = "`pv'"
-
+		
+		qui local dep e(depvar) 
+		qui sum `dep'  if `var'==0 & e(sample)
 
 		data_export_es `out', name(`name'_`var'_es)
 		data_export_es `pv', name(`name'_`var'_pv)
