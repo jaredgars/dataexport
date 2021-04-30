@@ -4,13 +4,13 @@ program define es_discrete
 
 	foreach var of varlist `varlist' {
 		qui local beta = _b[`var']
-		qui local out = round( `beta', 0.01)*100
+		qui local out = round( `beta', 0.001)*100
 		qui local out =  "`out'"
 
 		qui local t = _b[`var']/_se[`var']
 		qui local pv =2*ttail(e(df_r),abs(`t'))
 
-		qui local pv = round( `pv', 0.0001)
+		qui local pv = round( `pv', 0.001)
 		qui local pv = "`pv'"
 
 
