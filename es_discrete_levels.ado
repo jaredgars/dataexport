@@ -16,9 +16,13 @@ program define es_discrete_levels
 		
 		qui local dep e(depvar) 
 		qui sum `dep'  if `var'==0 & e(sample)
+		qui local meandep r(mean)
+		qui local pc = `beta'/`meandep'
+		
 
 		data_export_es `out', name(`name'_`var'_es)
 		data_export_es `pv', name(`name'_`var'_pv)
+		data_export_es `pc', name(`name'_`var'_pc)
 
 
     }
