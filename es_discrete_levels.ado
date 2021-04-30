@@ -1,6 +1,6 @@
 
-cap program drop es_discrete
-program define es_discrete
+cap program drop es_discrete_levels
+program define es_discrete_levels
 	syntax varlist, Name(string) 
 
 	foreach var of varlist `varlist' {
