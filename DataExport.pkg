@@ -8,3 +8,5 @@ d Support: gars.jared@gmail.com
 d
 f data_export.ado
 f data_export_es.ado
+f es_continuous.ado
+f es_discrete.ado
