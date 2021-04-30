@@ -1,0 +1,10 @@
+v 0.1
+d
+d 'DataExport': some basic ado files
+d
+d
+d Author: Jared Gars
+d Support: gars.jared@gmail.com
+d
+f data_export.ado
+f data_export_es.ado
