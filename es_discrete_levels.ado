@@ -5,7 +5,7 @@ program define es_discrete_levels
 
 	foreach var of varlist `varlist' {
 		qui local beta = _b[`var']
-		qui local out = round( `beta', 0.1)
+		qui local out = round( `beta', 0.01)
 		qui local out =  "`out'"
 
 		qui local t = _b[`var']/_se[`var']
